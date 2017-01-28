@@ -103,7 +103,9 @@ OR OTHER DEALINGS IN THE SOFTWARE.
         <table>
           <tr valign='top'>
             <td><strong>Abstract:</strong></td>
-            <td><xsl:value-of select='/xep/header/abstract'/></td>
+            <td>
+              <xsl:value-of select='/xep/header/abstract'/>
+            </td>
           </tr>
           <xsl:if test='$authors.count=1'>
             <tr valign='top'>
