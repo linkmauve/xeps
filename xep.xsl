@@ -103,7 +103,19 @@ OR OTHER DEALINGS IN THE SOFTWARE.
         <table>
           <tr valign='top'>
             <td><strong>Abstract:</strong></td>
-            <td><xsl:value-of select='/xep/header/abstract'/></td>
+            <td>
+              <xsl:value-of select='/xep/header/abstract'/>
+              <xsl:variable name='supersededby.count' select='count(/xep/header/supersededby/spec)'/>
+              <xsl:if test='$supersededby.count &gt; 0'>
+                <xsl:text> </xsl:text>
+                <strong>
+                  <xsl:text>Note well that it has been superseded by: </xsl:text>
+                  <xsl:apply-templates select='/xep/header/supersededby/spec'>
+                    <xsl:with-param name='speccount' select='$supersededby.count'/>
+                  </xsl:apply-templates>
+                </strong>
+              </xsl:if>
+            </td>
           </tr>
           <xsl:if test='$authors.count=1'>
             <tr valign='top'>
