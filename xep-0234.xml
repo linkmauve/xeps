@@ -30,6 +30,7 @@
     <date>2017-08-27</date>
     <initials>egp</initials>
     <remark><ul>
+      <li>Add missing anchors for internal links.</li>
       <li>Add myself to the authors</li>
     </ul></remark>
   </revision>
@@ -345,7 +346,7 @@
   </section2>
 </section1>
 
-<section1 topic='Application Format'>
+<section1 topic='Application Format' anchor='format'>
   <p>A Jingle File Transfer session is described by a content type that contains one application format and one transport method. Each &CONTENT; element defines the details of a single file transfer. A Jingle negotiation MAY result in the establishment of multiple file transfers by including multiple &CONTENT; elements.</p>
   <p>The application format consists of a file description contained within a &DESCRIPTION; element qualified by the "urn:xmpp:jingle:apps:file-transfer:5" namespace &VNOTE;. The file description is a &lt;file/&gt; element specifying metadata such as the name of the file, media type, etc., as illustrated in the following example.</p>
   <code><![CDATA[
@@ -432,7 +433,7 @@
   <p>A &lt;range/&gt; element MAY include an 'offset' attribute set to begin the transfer at a point other than the start of the file, and MAY include a 'length' attribute to request a portion of the file smaller than the remaining length of the file. If no 'offset' or 'length' attributes are present then it is the same as if no &lt;range/&gt; element was present, because the default values of the attributes would indicate a requested range of the entire file. In general, the first byte of data to be transferred is at the (zero-indexed) position specified by the 'offset' value, with a total of 'length' bytes sent.</p>
 </section1>
 
-<section1 topic='Negotiating a Jingle File Transfer Session'>
+<section1 topic='Negotiating a Jingle File Transfer Session' anchor='negotiation'>
   <p>In general, the process for negotiating a Jingle File Transfer session is as follows:</p>
   <code><![CDATA[
 Initiator                    Responder
