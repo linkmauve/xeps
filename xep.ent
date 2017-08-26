@@ -1057,6 +1057,15 @@ IANA Service Location Protocol, Version 2 (SLPv2) Templates</link></span> <note>
     <jid>flo@geekplace.eu</jid>
   </author>
 " >
+<!ENTITY linkmauve "
+  <author>
+    <firstname>Emmanuel Gil</firstname>
+    <surname>Peyrot</surname>
+    <email>linkmauve@linkmauve.fr</email>
+    <jid>linkmauve@linkmauve.fr</jid>
+    <uri>https://linkmauve.fr/</uri>
+  </author>
+" >
 
 <!-- XMPP Extension Protocols -->
 
