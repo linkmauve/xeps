@@ -30,6 +30,7 @@
     <date>2017-08-27</date>
     <initials>egp</initials>
     <remark><ul>
+      <li>Reference XEP-0371 instead of RFC6544, now that it is.</li>
       <li>Add missing anchors for internal links.</li>
       <li>Add myself to the authors</li>
     </ul></remark>
@@ -266,7 +267,7 @@
     <li>
       <p>Use any reliable Jingle transport mechanism, including but not limited to:</p>
       <ul>
-        <li>ICE-TCP &rfc6544;</li>
+        <li>ICE’s TCP Bytestreams &xep0371;</li>
         <li>SOCKS5 Bytestreams &xep0260;</li>
         <li>In-Band Bytestreams &xep0261;</li>
       </ul>
@@ -274,7 +275,7 @@
     <li><p>Define a file description format that, unlike <cite>XEP-0096</cite>, enables hash agility (via &xep0300;).</p></li>
     <li><p>Define a clear upgrade path from SI File Transfer to Jingle File Transfer.</p></li>
   </ul>
-  <p>Note that Jingle file transfer is only as reliable as the transports on which it depends. In particular, SOCKS5 Bytestreams ("S5B") does not always result in NAT or firewall traversal. To work around that problem, this specification requires all implementations to support as a fallback mechanism In-Band Bytestreams ("IBB"), which usually results in a successful (if slow) file transfer. A more robust and adaptable option is ICE-TCP (RFC 6544); at the time of writing &xep0176; is being updated to include the ability to negotiate ICE-TCP candidates.</p>
+  <p>Note that Jingle file transfer is only as reliable as the transports on which it depends. In particular, SOCKS5 Bytestreams ("S5B") does not always result in NAT or firewall traversal. To work around that problem, this specification requires all implementations to support as a fallback mechanism In-Band Bytestreams ("IBB"), which usually results in a successful (if slow) file transfer. Implementations are also advised to progressively implement the more robust and adaptable ICE’s TCP transport, as specified in &xep0371;.</p>
 </section1>
 
 <section1 topic='Terminology' anchor='terms'>
