@@ -391,7 +391,7 @@
     </tr>
     <tr>
       <td>media-type</td>
-      <td>The media type of the file content, which SHOULD be a valid MIME-TYPE as registered with &IANA; (specifically, as listed at &lt;<link url='http://www.iana.org/assignments/media-types'>http://www.iana.org/assignments/media-types</link>&gt;). If not specified, the content is assumed to be "application/octet-stream".</td>
+      <td>The media type of the file content, which SHOULD be a valid MIME type as registered with &IANA; (specifically, as listed at &lt;<link url='https://www.iana.org/assignments/media-types/media-types.xhtml'>https://www.iana.org/assignments/media-types/media-types.xhtml</link>&gt;). If not specified, the content is assumed to be "application/octet-stream".</td>
       <td>RECOMMENDED when offering a file, otherwise OPTIONAL</td>
     </tr>
     <tr>
