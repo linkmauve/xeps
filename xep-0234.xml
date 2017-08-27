@@ -454,10 +454,10 @@ Initiator                    Responder
    |                             |]]></code>
 
   <section2 topic='Offering a File' anchor='offering'>
-    <p>To start a File Offer, the initiator sends a Jingle session-initiation request to a potential responder. The request specifies three things:</p>
+    <p>To start a File Offer, the initiator sends a Jingle session-initiate request to a potential responder. The request specifies three things:</p>
     <ol>
       <li>A content 'senders' attribute with the value of 'initiator' to indicate this is a File Offer.</li>
-      <li>An application type of "urn:xmpp:jingle:apps:file-transfer:5". In particular, the &lt;description/&gt; element contains a &lt;file/&gt; elements describing the file to be sent.</li>
+      <li>An application type of "urn:xmpp:jingle:apps:file-transfer:5". In particular, the &DESCRIPTION; element contains a &lt;file/&gt; elements describing the file to be sent.</li>
       <li>An appropriate transport method.</li>
     </ol>
     <p>In this example, the initiator is &lt;romeo@montague.example&gt;, the responder is &lt;juliet@capulet.example&gt;, the application type is a File Offer, and the transport method is jingle-s5b (XEP-0260).</p>
@@ -792,7 +792,7 @@ a=file-range:<offset>-<(offset + length) | *>]]></code>
     <p>The equivalent SDP would be:</p>
     <code><![CDATA[
 a=file-selector: name:"test.txt" size:6144 type:text/plain hash:sha-1:55:2D:A7:49:93:08:52:C6:9A:E5:D2:14:1D:37:66:B1
-a=file-date:modification:"26 Jul 2015 21:46:00"
+a=file-date:modification:"26 Jul 2015 21:46:00 +0100"
 a=file-range:1024-*]]></code>
 </section1>
 
