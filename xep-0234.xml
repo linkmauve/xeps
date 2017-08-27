@@ -420,17 +420,17 @@
     </tr>
     <tr>
       <td>offset</td>
-      <td>Specifies the position, in bytes, from which to start transferring file data. This defaults to zero (0) if not specified.</td>
+      <td>Specifies the position, in bytes, from which to start transferring file data. This defaults to zero (0) if not specified. Any value bigger than the size of the file SHOULD be clamped to this size minus one.</td>
       <td>OPTIONAL</td>
     </tr>
     <tr>
       <td>length</td>
-      <td>Specifies the number of bytes to retrieve starting at offset. This defaults to the length of the file from offset to the end.</td>
+      <td>Specifies the number of bytes to retrieve starting at offset. This defaults to the length of the file from offset to the end. Any value bigger than this remaining length SHOULD be clamped to it. A length of zero is disallowed.</td>
       <td>OPTIONAL</td>
     </tr>
   </table>
   <p>Inclusion of a &lt;range/&gt; element in a File Offer indicates support of ranged transfers for future File Requests if the transfer is interrupted and needs to be restarted.</p>
-  <p>A &lt;range/&gt; element MAY include an 'offset' attribute set to begin the transfer at a point other than the start of the file, and MAY include a 'length' attribute to request a portion of the file smaller than the remaining length of the file. If no 'offset' or 'length' attributes are present then it is the same as if no &lt;range/&gt; element was present, because the default values of the attributes would indicate a requested range of the entire file. In general, the first byte of data to be transferred is at the (zero-indexed) position specified by the 'offset' value, with a total of 'length' bytes sent.</p>
+  <p>A &lt;range/&gt; element MAY include an 'offset' attribute set to begin the transfer at a point other than the start of the file, and MAY include a 'length' attribute to request a portion of the file smaller than the remaining length of the file. If no 'offset' or 'length' attributes are present then it is the same as if no &lt;range/&gt; element was present, because the default values of the attributes would indicate a requested range of the entire file. The first byte of data to be transferred is at the (zero-indexed) position specified by the 'offset' value, with a total of 'length' bytes sent.</p>
 </section1>
 
 <section1 topic='Negotiating a Jingle File Transfer Session' anchor='negotiation'>
