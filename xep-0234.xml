@@ -816,7 +816,7 @@ a=file-range:1024-*]]></code>
 
   <section2 topic='Checksum' anchor='hash'>
     <p>At any time during the lifetime of the file transfer session, the File Sender can communicate the checksum of the file to the File Receiver.</p>
-    <p>This can be done in the session-initiate message if the File Sender already knows the checksum, as shown above in Example 3.</p>
+    <p>This can be done in the session-initiate message if the File Sender already knows the checksum, as shown above in <link url='#example-3'>Example 3</link>.</p>
     <p>After the session-initiate message, this can also be done by sending a session-info message containing a &lt;checksum/&gt; element qualified by the 'urn:xmpp:jingle:apps:file-transfer:5' namespace. In such a case however, the session-initiate message MUST contain a &lt;hash-used/&gt; element. The &lt;checksum/&gt; element SHOULD contain 'creator' and 'name' attributes sufficient to identitfy the content the checksum belongs to.  Additionally, the &lt;checksum/&gt; element MUST contain a &lt;file/&gt; element which MUST contain at least one &lt;hash/&gt; element qualified by the 'urn:xmpp:hashes:2' namespace. Each &lt;hash/&gt; element contains a checksum of the file data produced in accordance with the hashing function specified by the 'algo' attribute selected by the &lt;hash-used/&gt; element of the session-initiate, which MUST be one of the functions listed in the &ianahashes;.</p>
     <example caption="Initiator sends checksum in session-info"><![CDATA[
 <iq from='romeo@montague.example/dr4hcr0st3lup4c'
