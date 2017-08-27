@@ -382,12 +382,11 @@
     <tr>
       <td>hash</td>
       <td>A hash of the file content, using the &lt;hash/&gt; element defined in &xep0300; and qualifed by the 'urn:xmpp:hashes:2' namespace. Multiple hashes MAY be included for hash agility.</td>
-      <td>See &lt;hash-used/&gt;</td>
+      <td rowspan='2'>Either a &lt;hash/&gt; or a &lt;hash-used/&gt; element MUST be included when offering a file.</td>
     </tr>
     <tr>
       <td>hash-used</td>
       <td>Alternatively to a &lt;hash/&gt; element, the initiator can also include a &lt;hash-used/&gt; element. This avoids the need to read the file twice to calculate the hash.</td>
-      <td>Either a &lt;hash/&gt; or a &lt;hash-used/&gt; element MUST be included when offering a file.</td>
     </tr>
     <tr>
       <td>media-type</td>
